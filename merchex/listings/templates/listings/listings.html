@@ -1,0 +1,13 @@
+{% extends "listings/base.html" %}
+
+{% block content %}
+
+<h1>Listings</h1>
+<h2>Toutes nos annonces:</h2>
+<ul>
+    {% for listing in listings %}
+    <li><a href="{% url 'listing_detail' listing.id %}">{{listing.title|upper}}</a></li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

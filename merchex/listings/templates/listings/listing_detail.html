@@ -1,0 +1,22 @@
+{% extends "listings/base.html" %}
+
+{% block content %}
+
+<h2>{{ listing.title }}</h2>
+
+<p>{{ listing.description }}</p>
+
+<ul>
+    {% if listing.sold %}
+    <li>Rupture de stock</li>
+    {% else %}
+    <li>En stock</li>
+    {% endif %}
+    <li>{{ listing.year }}</li>
+    <li>{{ listing.type }}</li>
+    <li>{{ listing.band }}</li>
+</ul>
+
+<a href="{% url 'listings' %}">Retour aux annonces</a>
+
+{% endblock %}
