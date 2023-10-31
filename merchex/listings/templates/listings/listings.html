@@ -4,9 +4,13 @@
 
 <h1>Listings</h1>
 <h2>Toutes nos annonces:</h2>
+<a href="{% url 'listing-create' %}">Créer une nouvelle annonce</a>
 <ul>
     {% for listing in listings %}
-    <li><a href="{% url 'listing_detail' listing.id %}">{{listing.title|upper}}</a></li>
+    <li>
+        <a href={% url 'listing_detail' listing.id %}>{{listing.title|upper}}</a>
+        <a href={% url 'listing-change' listing.id %}>[Editer]</a>
+    </li>
     {% endfor %}
 </ul>
 

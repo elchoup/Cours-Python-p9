@@ -19,6 +19,8 @@
 <li><a href="{% url 'listing_detail' listing.id %}">{{ listing.title }}</a></li>
 {% endfor %}
 
-<a href="{% url 'band_list' %}">Retour aux groupes</a>
+<a href={% url 'band-change' band.id %}>Editer le groupe</a>
+<a href={% url 'band-delete' band.id %}>Supprimer le groupe</a>
+<a href={% url 'band_list' %}>Retour aux groupes</a>
 
 {% endblock %}

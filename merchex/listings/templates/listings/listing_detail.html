@@ -17,6 +17,9 @@
     <li>{{ listing.band }}</li>
 </ul>
 
-<a href="{% url 'listings' %}">Retour aux annonces</a>
+
+<a href={% url 'listing-change' listing.id %}>Editer l'annonce</a>
+<a href={% url 'listing-delete' listing.id %}>Supprimer l'annonce</a>
+<a href={% url 'listings' %}>Retour aux annonces</a>
 
 {% endblock %}
